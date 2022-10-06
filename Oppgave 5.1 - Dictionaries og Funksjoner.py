@@ -1,10 +1,14 @@
 # fikk litt hjelp her: https://pythonexamples.org/python-list-of-dictionaries/
 
+
+from traceback import print_tb
+
+
 liste = [
 {
     "name":"Con air",
     "year": 1997,
-    "rating": 69 
+    "rating": 6.9 
 }
 ,
 {
@@ -22,22 +26,39 @@ liste = [
 
     
 
-def funk(liste):
-    liste.append({"name": input("navn på film 1 " ), "year" : input("år på film 1 "), "rating" : input("rating film1")})
-    # liste.append({"name": input("navn på film 2 " ), "year" : input("år på film 2 "), "rating" : input("rating på film 2" )})
-    # liste.append({"name": input("navn på film 3 " ), "year" : input("år på film 3 "), "rating" : input("rating på film 3 ")})
-    # liste.append({"name": input("navn på film 4 " ), "year" : input("år på film 4 "), "rating" : input("rating på film 4 ")})
-    # liste.append({"name": input("navn på film 5 " ), "year" : input("år på film 5 "), "rating" : input("rating på film 5 ")})
-    
-
-for rating in liste:
-    if rating == "":
-        liste[3]["rating"].append("5")
+def addMovie(list_of_movies, name, year, rating=5.0):
+    list_of_movies.append({"name": name ,"year": year, "rating": rating})
 
 
-        
-   
-funk(liste)    
-        
+addMovie(liste, "shrek", 2001, 7.1)
+addMovie(liste, "Money ball", 2011, 7.6)
+addMovie(liste, "Happy Gilmore", 1996, 7.0)
+addMovie(liste, "National Treasure", 2004, )
+
 
 print(liste)
+
+def filmerPrint(liste_of_movies):
+    for movie in liste_of_movies:
+        print(f" {movie['name']} - {movie['year']} has a rating of {movie['rating']} ")
+     
+filmerPrint(liste)  
+
+
+def gjennomsnitt(liste_of_movies):
+    nummer= 0
+    for movie in liste_of_movies:
+        nummer = nummer +  movie["rating"]
+        avg = nummer / len(liste_of_movies)
+    print(avg)
+
+gjennomsnitt(liste)
+
+liste_2 = []
+def yearOfMovies(liste_of_movies):
+    for movie in liste_of_movies:
+        if movie["year"] <= 2010:
+            liste_2.append(movie)
+            print(liste_2)
+
+yearOfMovies(liste)
