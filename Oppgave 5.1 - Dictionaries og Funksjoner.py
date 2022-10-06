@@ -1,29 +1,43 @@
 # fikk litt hjelp her: https://pythonexamples.org/python-list-of-dictionaries/
 
-list = [
+liste = [
 {
     "name":"Con air",
-    "year": "1997",
-    "rating": "69" 
+    "year": 1997,
+    "rating": 69 
 }
 ,
 {
     "name":"Inside out",
-    "year": "2015",
-    "rating": "8.1" 
+    "year": 2015,
+    "rating": 8.1 
 },
 {
     "name": "Inception",
-    "year": "2010",
-    "rating": "8.7" 
+    "year": 2010,
+    "rating": 8.7 
 }
 ]
 
-def funk(list):
-    list.append({"name":"Bee Movie", "year" : "2007", "rating" : "6.1"})
-    list.append({"name":"Money ball", "year" : "2011", "rating" : "7.6"})
-    list.append({"name":"The wolf of wallstreet", "year" : "2013", "rating" : "8.2"})
-    list.append({"name":"Shrek", "year" : "2001", "rating" : "7.9"})
 
-funk(list)
-print(list)
+    
+
+def funk(liste):
+    liste.append({"name": input("navn på film 1 " ), "year" : input("år på film 1 "), "rating" : input("rating film1")})
+    # liste.append({"name": input("navn på film 2 " ), "year" : input("år på film 2 "), "rating" : input("rating på film 2" )})
+    # liste.append({"name": input("navn på film 3 " ), "year" : input("år på film 3 "), "rating" : input("rating på film 3 ")})
+    # liste.append({"name": input("navn på film 4 " ), "year" : input("år på film 4 "), "rating" : input("rating på film 4 ")})
+    # liste.append({"name": input("navn på film 5 " ), "year" : input("år på film 5 "), "rating" : input("rating på film 5 ")})
+    
+
+for rating in liste:
+    if rating == "":
+        liste[3]["rating"].append("5")
+
+
+        
+   
+funk(liste)    
+        
+
+print(liste)
