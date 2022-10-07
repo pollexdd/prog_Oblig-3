@@ -3,7 +3,6 @@
 
 from asyncore import write
 from fileinput import close
-from tkinter import N
 from traceback import print_tb
 
 
@@ -57,19 +56,23 @@ def gjennomsnitt(liste_of_movies):
 
 gjennomsnitt(liste)
 
-liste_2 = []
-def yearOfMovies(liste_of_movies):
-    for movie in liste_of_movies:
-        if movie["year"] <= 2010:
-            liste_2.append(movie)
-            print(liste_2)
 
-yearOfMovies(liste)
+# kommenterte ut dette klarte ikke å få til Oppgave 5.2 C
+
+# liste_2 = []
+# def yearOfMovies(liste_of_movies):
+#     for movie in liste_of_movies:
+#         if movie["year"] <= 2010:
+#             liste_2.append(movie)
+#             print(liste_2)
+
+# yearOfMovies(liste)
 
 
 
 def filLager(list_of_movies):
     txt = open("movies.txt", "w+")
+    txt.write("Dette er fra en txt fil\n")
     for movie in list_of_movies:
         txt.write(f"{movie['name']} - {movie['year']} has the rating of {movie['rating']}\n")
 
