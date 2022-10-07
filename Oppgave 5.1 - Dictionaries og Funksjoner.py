@@ -1,6 +1,9 @@
 # fikk litt hjelp her: https://pythonexamples.org/python-list-of-dictionaries/
 
 
+from asyncore import write
+from fileinput import close
+from tkinter import N
 from traceback import print_tb
 
 
@@ -62,3 +65,21 @@ def yearOfMovies(liste_of_movies):
             print(liste_2)
 
 yearOfMovies(liste)
+
+
+
+def filLager(list_of_movies):
+    txt = open("movies.txt", "w+")
+    for movie in list_of_movies:
+        txt.write(f"{movie['name']} - {movie['year']} has the rating of {movie['rating']}\n")
+
+filLager(liste)
+
+def filLeser(filnavn):
+    filnavn = open(filnavn, "r")
+    for movie in filnavn:
+        innhold = filnavn.read()
+        print(innhold)
+        
+
+filLeser("movies.txt")
