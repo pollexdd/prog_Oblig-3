@@ -1,0 +1,15 @@
+Teorioppgave 1 - Dictionary 
+
+en dictonary er en liste med "keys" som kan lagre en "value".
+hvis jeg skal lage en dictonary av spill så kan keys i dictonaryen være sjanger, tittel, platform.
+så hvis jeg legger inn 20 spill med de samme keysa men forskjellige values kan jeg lett kalle på alle tittel keyene og printe ut alle i dictonaryen og få printet de ut.
+
+
+
+Teorioppgave 2 - Funksjoner
+
+med funksjoner kan man programere en ting en gang og bare putte inn "augments" så kjører funksjonen med inputet du la inn med augmenten.
+så hvis jeg skal printe ut 10 lister kan jeg lage en fuksjon som printer en liste. 
+så legge inn listene jeg vil printe ut i "augments" så slipper man og programere får en print funksjon til alle listene seperat.
+
+
